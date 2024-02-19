@@ -1,15 +1,15 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Decode Dashboard",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#74ABE2",
+    "light": "#74ABE2",
+    "dark": "#1D1E26",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -50,12 +50,34 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Modules",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        {
+          "group": "User",
+          "pages": [
+            "user/Overview",
+            {
+              "group": "UserResolver",
+              "pages": [
+                "user/resolver/Implementation",
+                {
+                  "group": "Queries",
+                  "pages": ["user/resolver/Queries/selfQuery"]
+                },
+                {
+                  "group": "Mutations",
+                  "pages": ["user/resolver/Mutations/updateSelf"]
+                }
+              ]
+            },
+            "user/UserService"
+          ]
+        }
       ]
+    },
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart", "development"]
     },
     {
       "group": "Essentials",
@@ -70,9 +92,7 @@
     },
     {
       "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
+      "pages": ["api-reference/introduction"]
     },
     {
       "group": "Endpoint Examples",
