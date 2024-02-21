@@ -57,20 +57,26 @@
           "pages": [
             "user/Overview",
             {
-              "group": "UserResolver",
+              "group": "Mutations",
               "pages": [
-                "user/resolver/Implementation",
-                {
-                  "group": "Queries",
-                  "pages": ["user/resolver/Queries/selfQuery"]
-                },
-                {
-                  "group": "Mutations",
-                  "pages": ["user/resolver/Mutations/updateSelf"]
-                }
+                "user/Mutations/claimProduct",
+                "user/Mutations/createProduct",
+                "user/Mutations/createSocial",
+                "user/Mutations/deleteSelf",
+                "user/Mutations/deleteSocial",
+                "user/Mutations/followUser",
+                "user/Mutations/registerUser",
+                "user/Mutations/selectBackground",
+                "user/Mutations/unclaimProduct",
+                "user/Mutations/unfollowUser",
+                "user/Mutations/updateSelf",
+                "user/Mutations/updateSocials"
               ]
             },
-            "user/UserService"
+            {
+              "group": "Queries",
+              "pages": ["user/Queries/availableSocialTypes", "user/Queries/checkUser", "user/Queries/getProduct", "user/Queries/me"]
+            }
           ]
         }
       ]
