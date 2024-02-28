@@ -1,21 +1,19 @@
 ---
 title: 'checkUser'
-description: 'undefined'
+description: 'Checks if an user exists based on the email.'
 ---
-    
-    This method of the 
     
     ### Arguments
     
-    
-    <ParamField body="select" type="FollowingSelect">
-    </ParamField>
+    <ParamField body="select" type="String!"/> 
+
     
     ### Returns
-    <ParamField query="response" type="UserCheckResponse!">
+
+    <ParamField body="select" type="UserCheckResponse">
     undefined
-      <Expandable title="fields">
-            <ResponseField name="exists" type="Boolean!"></ResponseField>    
+    <Expandable title="fields">
+    <ResponseField name="exists" type="Boolean!"></ResponseField>
 <ResponseField name="id" type="String"></ResponseField>
     </Expandable>
     </ParamField>

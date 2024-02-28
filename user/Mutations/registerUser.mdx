@@ -1,17 +1,20 @@
 ---
 title: 'registerUser'
-description: 'undefined'
+description: 'Registers a new user.'
 ---
-    
-    This method of the 
     
     ### Arguments
     
-    
-    <ParamField body="select" type="FollowingSelect">
-    </ParamField>
+    <ParamField body="select" type="RegisterDto">
+    undefined
+    <Expandable title="fields">
+    <ResponseField name="email" type="String!"></ResponseField>
+<ResponseField name="newUserId" type="String!"></ResponseField>
+<ResponseField name="username" type="String!"></ResponseField>
+    </Expandable>
+    </ParamField> 
+
     
     ### Returns
-    <ParamField query="response" type="String!">
-    
-    </ParamField>
+
+    <ParamField body="select" type="String!"/>

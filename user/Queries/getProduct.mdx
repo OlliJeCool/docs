@@ -1,28 +1,26 @@
 ---
 title: 'getProduct'
-description: 'undefined'
+description: 'Returns a Product fetched by its public ID, is used to access the user information from the site displayed after scanning a Product QR code.'
 ---
-    
-    This method of the 
     
     ### Arguments
     
-    
-    <ParamField body="select" type="FollowingSelect">
-    </ParamField>
+    <ParamField body="select" type="String!"/> 
+
     
     ### Returns
-    <ParamField query="response" type="Product!">
-    undefined
-      <Expandable title="fields">
-            <ResponseField name="claimed" type="Boolean!"></ResponseField>    
-<ResponseField name="imageSrc" type="String"></ResponseField>    
-<ResponseField name="name" type="String!"></ResponseField>    
-<ResponseField name="orderId" type="String!"></ResponseField>    
-<ResponseField name="productColor" type="Color!"></ResponseField>    
-<ResponseField name="productType" type="Type!"></ResponseField>    
-<ResponseField name="publicId" type="String!"></ResponseField>    
-<ResponseField name="specialBackground" type="Background"></ResponseField>    
-<ResponseField name="user" type="ProductUser"></ResponseField>
+
+    <ParamField body="select" type="Product">
+    Object containing information about a product.
+    <Expandable title="fields">
+    <ResponseField name="claimed" type="Boolean!">Indicates whether the product is claimed or not.</ResponseField>
+<ResponseField name="imageSrc" type="String">Source URL of the product image.</ResponseField>
+<ResponseField name="name" type="String!">Collection name.</ResponseField>
+<ResponseField name="orderId" type="String!">ID of the order the product was bought under.</ResponseField>
+<ResponseField name="productColor" type="Color!">Indicates the products color.</ResponseField>
+<ResponseField name="productType" type="Type!">Indicates the product type.</ResponseField>
+<ResponseField name="publicId" type="String!">CUID automatically assigned on creation.</ResponseField>
+<ResponseField name="specialBackground" type="Background">When the product has a special background connected to it.</ResponseField>
+<ResponseField name="user" type="ProductUser">When the product it is connected this user.</ResponseField>
     </Expandable>
     </ParamField>

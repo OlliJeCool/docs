@@ -1,0 +1,26 @@
+---
+      title: 'User'
+      description: 'User model'
+---
+          
+          ## Fields
+          
+          <ParamField body="about" type="String" />
+<ParamField body="backgrounds" type="[Background!]!">Backgrounds owned by user.</ParamField>
+<ParamField body="followedBy" type="[User!]!">Users following user.</ParamField>
+<ParamField body="followers" type="FollowingCounts!">undefined</ParamField>
+<ParamField body="following" type="[User!]!">Users followed by user.</ParamField>
+<ParamField body="from" type="String" />
+<ParamField body="id" type="String!" />
+<ParamField body="name" type="String!" />
+<ParamField body="products" type="[Product!]!">Products owned by user.</ParamField>
+<ParamField body="selectedBackground" type="Background!">The background selected by the user to be displayed on their card.</ParamField>
+<ParamField body="socials" type="[Social!]!">Socials owned by user.</ParamField>
+<ParamField body="verified" type="Boolean!" />
+          
+          ## References
+          - [Mutation](/user/Mutations/Mutation)
+- [ProductUser](/user/Objects/ProductUser)
+- [Query](/user/Queries/Query)
+- [User](/user/Objects/User)
+      

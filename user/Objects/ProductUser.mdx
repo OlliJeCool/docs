@@ -1,0 +1,17 @@
+---
+      title: 'ProductUser'
+      description: 'User model fetched trough a product with limited fields for safety.'
+---
+          
+          ## Fields
+          
+          <ParamField body="followedBy" type="[User!]!">User's followers.</ParamField>
+<ParamField body="from" type="String" />
+<ParamField body="id" type="String!" />
+<ParamField body="name" type="String!" />
+<ParamField body="selectedBackground" type="Background!">The background selected by the user.</ParamField>
+<ParamField body="socials" type="[Social!]!">User's socials.</ParamField>
+          
+          ## References
+          - [Product](/user/Objects/Product)
+      

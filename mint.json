@@ -13,6 +13,10 @@
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
+    },
+    "background": {
+      "dark": "#1D1E26",
+      "light": "#F8F8FF"
     }
   },
   "topbarLinks": [
@@ -33,19 +37,14 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
+      "name": "Introduction",
+      "icon": "book-open-cover",
+      "url": "user/Overview"
+    },
+    {
+      "name": "Playground",
       "icon": "book-open-cover",
       "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
     }
   ],
   "navigation": [
@@ -75,43 +74,56 @@
             },
             {
               "group": "Queries",
-              "pages": ["user/Queries/availableSocialTypes", "user/Queries/checkUser", "user/Queries/getProduct", "user/Queries/me"]
+              "pages": [
+                "user/Queries/availableSocialTypes",
+                "user/Queries/checkUser",
+                "user/Queries/getProduct",
+                "user/Queries/me"
+              ]
+            },
+            {
+              "group": "Types",
+              "pages": [
+                {
+                  "group": "Objects",
+                  "pages": [
+                    "user/Objects/Background",
+                    "user/Objects/Product",
+                    "user/Objects/BackgroundType",
+                    "user/Objects/Color",
+                    "user/Objects/FollowingCounts",
+                    "user/Objects/FollowPubSubData",
+                    "user/Objects/notifFollower",
+                    "user/Objects/ProductUser",
+                    "user/Objects/Social",
+                    "user/Objects/SocialType",
+                    "user/Objects/Subscription",
+                    "user/Objects/TextColor",
+                    "user/Objects/Type",
+                    "user/Objects/User",
+                    "user/Objects/UserCheckResponse"
+                  ]
+                },
+                {
+                  "group": "Inputs",
+                  "pages": [
+                    "user/Inputs/CreateProductInput",
+                    "user/Inputs/CreateSocialInput",
+                    "user/Inputs/FollowingSelect",
+                    "user/Inputs/RegisterDto",
+                    "user/Inputs/UpdateSocialInput",
+                    "user/Inputs/UpdateUserInput"
+                  ]
+                }
+              ]
             }
           ]
         }
       ]
-    },
-    {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "instagram": "https://instagram.com/decodefashionofficial",
+    "youtube": "https://youtube.com/@decodefashionofficial"
   }
 }
