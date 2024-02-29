@@ -2,17 +2,17 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Decode Dashboard",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/dark.png",
+    "light": "/logo/light.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#74ABE2",
-    "light": "#74ABE2",
-    "dark": "#1D1E26",
+    "primary": "#638FFF",
+    "light": "#638FFF",
+    "dark": "#638FFF",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#638FFF",
+      "to": "#7BA0FF"
     },
     "background": {
       "dark": "#1D1E26",
@@ -21,26 +21,17 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "E-Shop",
+      "url": "https://decodefashion.store/"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://decodefashion.me/configurator"
   },
   "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
   ],
   "anchors": [
-    {
-      "name": "Introduction",
-      "icon": "book-open-cover",
-      "url": "user/Overview"
-    },
     {
       "name": "Playground",
       "icon": "book-open-cover",
@@ -48,6 +39,10 @@
     }
   ],
   "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["getting-started/introduction","getting-started/quickstart", "getting-started/database"]
+    },
     {
       "group": "Modules",
       "pages": [

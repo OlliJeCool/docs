@@ -3,14 +3,12 @@ title: 'claimProduct'
 description: 'Claims a product - links it to the logged in user who is claiming it.'
 ---
     
-    import { MyComponent } from '/snippets/custom-component.mdx';
-
-    ### Arguments
+    ## Arguments
     
     <ParamField body="select" type="String!"/> 
 
     
-    ### Returns
+    ## Returns
 
     <ParamField body="select" type="Product">
     Object containing information about a product.
@@ -26,5 +24,3 @@ description: 'Claims a product - links it to the logged in user who is claiming 
 <ResponseField name="user" type="ProductUser">When the product it is connected this user.</ResponseField>
     </Expandable>
     </ParamField>
-
-    <MyComponent title={"Title"} />
