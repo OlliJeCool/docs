@@ -1,0 +1,39 @@
+---
+title: 'deleteSocial'
+description: 'Deletes the given Social.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="socialId" type="String!"/> 
+
+    
+    ## Returns
+
+    <ParamField body="deleteSocial" type="Boolean!"/>
+
+    <RequestExample>
+    ```graphql Request
+    mutation ($socialId: String!) {
+        deleteSocial(socialId: $socialId)
+    }
+    ```
+    ```json Arguments
+    {
+        "socialId": "socialId"
+    }
+    ```
+    ```json Headers
+    {
+        "Authorization": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+
+    <ResponseExample>
+    ```json Response
+    {
+        "deleteSocial": true
+    }
+    ```
+    </ResponseExample>

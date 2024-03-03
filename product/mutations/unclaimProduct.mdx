@@ -1,0 +1,39 @@
+---
+title: 'unclaimProduct'
+description: 'Uncalims a product - unlinks it from the logged in user who is unclaiming it.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="productPublicId" type="String!"/> 
+
+    
+    ## Returns
+
+    <ParamField body="unclaimProduct" type="Boolean!"/>
+
+    <RequestExample>
+    ```graphql Request
+    mutation ($productPublicId: String!) {
+        unclaimProduct(productPublicId: $productPublicId)
+    }
+    ```
+    ```json Arguemnts
+    {
+        "productPublicId": "productPublicId"
+    }
+    ```
+    ```json Headers
+    {
+        "Authorization": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+
+    <ResponseExample>
+    ```json Response
+    {
+        "unclaimProduct": true
+    }
+    ```
+    </ResponseExample>

@@ -5,16 +5,46 @@ description: 'Registers a new user.'
     
     ## Arguments
     
-    <ParamField body="select" type="RegisterDto">
-    undefined
+    <ParamField body="registerDto" type="RegisterDto">
+    
     <Expandable title="fields">
-    <ResponseField name="email" type="String!"></ResponseField>
-<ResponseField name="newUserId" type="String!"></ResponseField>
-<ResponseField name="username" type="String!"></ResponseField>
+    <ResponseField name="email" type="String!"/>
+<ResponseField name="newUserId" type="String!"/>
+<ResponseField name="username" type="String!"/>
     </Expandable>
     </ParamField> 
 
     
     ## Returns
 
-    <ParamField body="select" type="String!"/>
+    <ParamField body="registerUser" type="String!"/>
+
+    <RequestExample>
+    ```graphql Request
+    mutation ($registerDto: RegisterDto!) {
+        registerUser(registerDto: $registerDto)
+    }
+    ```
+    ```json Arguments
+    {
+      "registerDto": {
+        "email": "test-email@yourcompany.com",
+        "newUserId": "newUserId",
+        "username": "username"
+      }
+    }
+    ```
+    ```json Headers
+    {
+        "Authorization": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+
+    <ResponseExample>
+    ```json Response
+    {
+        "registerUser": "registerUser"
+    }
+    ```
+    </ResponseExample>

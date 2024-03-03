@@ -5,9 +5,35 @@ description: 'Allows the currently authenticated user to follow another user.'
     
     ## Arguments
     
-    <ParamField body="select" type="String!"/> 
+    <ParamField body="targetId" type="String!"/> 
 
     
     ## Returns
 
-    <ParamField body="select" type="Boolean!"/>
+    <ParamField body="followUser" type="Boolean!"/>
+
+    <RequestExample>
+    ```graphql Request
+    mutation ($targetId: String!) {
+        followUser(targetId: $targetId)
+    }
+    ```
+    ```json Arguemnts
+    {
+        "targetId": "targetId"
+    }
+    ```
+    ```json Headers
+    {
+        "Authorization": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+
+    <ResponseExample>
+    ```json Response
+    {
+        "followUser": true
+    }
+    ```
+    </ResponseExample>

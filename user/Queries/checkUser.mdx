@@ -5,15 +5,47 @@ description: 'Checks if an user exists based on the email.'
     
     ## Arguments
     
-    <ParamField body="select" type="String!"/> 
+    <ParamField body="email" type="String!"/> 
 
     
     ## Returns
 
-    <ParamField body="select" type="UserCheckResponse">
-    undefined
+    <ParamField body="checkUser" type="UserCheckResponse">
+    
     <Expandable title="fields">
-    <ResponseField name="exists" type="Boolean!"></ResponseField>
-<ResponseField name="id" type="String"></ResponseField>
+    <ResponseField name="exists" type="Boolean!"/>
+<ResponseField name="id" type="String"/>
     </Expandable>
     </ParamField>
+    
+    <RequestExample>
+    ```graphql Request
+    query ($email: String!) {
+      checkUser(email: $email) {
+        exists
+		id  
+        }
+    }
+    ```
+    ```json Arguemnts
+    {
+        "email": "test-email@yourcompany.com"
+    }
+    ```
+    ```json Headers
+    {
+        "Authoriaztion": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+    {
+    "checkUser": {
+        "exists": true,
+        "id": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e"
+    }
+    }
+    ```
+    </ResponseExample>
+    

@@ -1,0 +1,70 @@
+---
+title: 'updateSocials'
+description: 'Updates a given Social of the user using the information provided.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="updateSocialInput" type="UpdateSocialInput">
+    Input object used for updating a Social.
+    <Expandable title="fields">
+    <ResponseField name="active" type="Boolean">Updated activity/visibility status.</ResponseField>
+<ResponseField name="id" type="String!">Socials UUID.</ResponseField>
+<ResponseField name="username" type="String">Updated social media site username.</ResponseField>
+    </Expandable>
+    </ParamField> 
+
+    
+    ## Returns
+
+    <ParamField body="updateSocials" type="Social">
+    An object containing all information about a Social media connection.
+    <Expandable title="fields">
+    <ResponseField name="active" type="Boolean!">Determines, whether the Social is displayed on the users card or not.</ResponseField>
+<ResponseField name="id" type="String!">UUID automatically generated on creation.</ResponseField>
+<ResponseField name="socialType" type="SocialType!">The type of the Social, determines which social media site is the username linked to.;</ResponseField>
+<ResponseField name="username" type="String!">Users username on the social media site.</ResponseField>
+    </Expandable>
+    </ParamField>
+    
+    <RequestExample>
+    ```graphql Request
+    mutation ($updateSocialInput: [UpdateSocialInput!]!) {
+      updateSocials(updateSocialInput: $updateSocialInput) {
+        active
+		id
+		username  
+        }
+    }
+    ```
+    ```json Arguemnts
+    {
+      "updateSocialInput": [
+      {
+        "active": true,
+        "id": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e",
+        "username": "username"
+      }
+     ]
+    }
+    ```
+    ```json Headers
+    {
+        "Authoriaztion": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+    {
+    "updateSocials": [
+        {
+          "active": true,
+          "id": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e",
+          "username": "username"
+        }
+      ]
+    }
+    ```
+    </ResponseExample>
+    

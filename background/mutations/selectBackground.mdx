@@ -1,0 +1,39 @@
+---
+title: 'selectBackground'
+description: 'Allows the currently authenticated user to select a background.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="backgroundId" type="String!"/> 
+
+    
+    ## Returns
+
+    <ParamField body="selectBackground" type="String!"/>
+
+    <RequestExample>
+    ```graphql Request
+    mutation ($backgroundId: String!) {
+        selectBackground(backgroundId: $backgroundId)
+    }
+    ```
+    ```json Arguemnts
+    {
+        "backgroundId": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e"
+    }
+    ```
+    ```json Headers
+    {
+        "Authorization": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+
+    <ResponseExample>
+    ```json Response
+    {
+        "selectBackground": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e"
+    }
+    ```
+    </ResponseExample>

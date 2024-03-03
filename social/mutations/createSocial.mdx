@@ -1,0 +1,64 @@
+---
+title: 'createSocial'
+description: 'Creates a new Social from the given input, linked to currently signed in user.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="createSocialInput" type="CreateSocialInput">
+    Input object containing information for creating a new Social.
+    <Expandable title="fields">
+    <ResponseField name="socialTypesId" type="String!">ID of the Social media site within our database.</ResponseField>
+<ResponseField name="username" type="String!">A Social media site username.</ResponseField>
+    </Expandable>
+    </ParamField> 
+
+    
+    ## Returns
+
+    <ParamField body="createSocial" type="Social">
+    An object containing all information about a Social media connection.
+    <Expandable title="fields">
+    <ResponseField name="active" type="Boolean!">Determines, whether the Social is displayed on the users card or not.</ResponseField>
+<ResponseField name="id" type="String!">UUID automatically generated on creation.</ResponseField>
+<ResponseField name="socialType" type="SocialType!">The type of the Social, determines which social media site is the username linked to.;</ResponseField>
+<ResponseField name="username" type="String!">Users username on the social media site.</ResponseField>
+    </Expandable>
+    </ParamField>
+    
+    <RequestExample>
+    ```graphql Request
+    mutation ($createSocialInput: CreateSocialInput!) {
+      createSocial(createSocialInput: $createSocialInput) {
+        active
+		id
+		username  
+        }
+    }
+    ```
+    ```json Arguemnts
+    {
+     "createSocialInput": {
+        "socialTypesId": "socialTypesId",
+        "username": "username"
+      }
+    }
+    ```
+    ```json Headers
+    {
+        "Authoriaztion": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+    {
+      "createSocial": {
+        "active": true,
+        "id": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e",
+        "username": "username"
+      }
+    }
+    ```
+    </ResponseExample>
+    

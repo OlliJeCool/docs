@@ -1,0 +1,62 @@
+---
+title: 'claimProduct'
+description: 'Claims a product - links it to the logged in user who is claiming it.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="select" type="String!"/> 
+
+    
+    ## Returns
+
+    <ParamField body="select" type="Product">
+    Object containing information about a product.
+    <Expandable title="fields">
+    <ResponseField name="claimed" type="Boolean!">Indicates whether the product is claimed or not.</ResponseField>
+<ResponseField name="imageSrc" type="String">Source URL of the product image.</ResponseField>
+<ResponseField name="name" type="String!">Collection name.</ResponseField>
+<ResponseField name="orderId" type="String!">ID of the order the product was bought under.</ResponseField>
+<ResponseField name="productColor" type="Color!">Indicates the products color.</ResponseField>
+<ResponseField name="productType" type="Type!">Indicates the product type.</ResponseField>
+<ResponseField name="publicId" type="String!">CUID automatically assigned on creation.</ResponseField>
+<ResponseField name="specialBackground" type="Background">When the product has a special background connected to it.</ResponseField>
+<ResponseField name="user" type="ProductUser">When the product it is connected this user.</ResponseField>
+    </Expandable>
+    </ParamField>
+    
+    <RequestExample>
+    ```graphql Request
+    mutation ($productPublicId: String!) {
+      claimProduct(productPublicId: $productPublicId) {
+        productColor
+        productType
+        specialBackground
+        user  
+        }
+    }
+    ```
+    ```json Arguemnts
+    {
+     "productPublicId": "productPublicId"
+    }
+    ```
+    ```json Headers
+    {
+      "Authoriaztion": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+    {
+      "claimProduct": {
+      "claimed": true,
+      "imageSrc": "imageSrc",
+      "name": "A name",
+      "orderId": "orderId",
+      "publicId": "publicId"
+      }
+    }
+    ```
+    </ResponseExample>

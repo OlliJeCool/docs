@@ -5,7 +5,7 @@
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/icon.svg",
   "colors": {
     "primary": "#638FFF",
     "light": "#638FFF",
@@ -29,8 +29,7 @@
     "name": "Dashboard",
     "url": "https://decodefashion.me/configurator"
   },
-  "tabs": [
-  ],
+  "tabs": [],
   "anchors": [
     {
       "name": "Playground",
@@ -41,7 +40,11 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "pages": ["getting-started/introduction","getting-started/quickstart", "getting-started/database"]
+      "pages": [
+        "getting-started/introduction",
+        "getting-started/quickstart",
+        "getting-started/database"
+      ]
     },
     {
       "group": "Modules",
@@ -49,69 +52,109 @@
         {
           "group": "User",
           "pages": [
-            "user/Overview",
             {
               "group": "Mutations",
               "pages": [
-                "user/Mutations/claimProduct",
-                "user/Mutations/createProduct",
-                "user/Mutations/createSocial",
-                "user/Mutations/deleteSelf",
-                "user/Mutations/deleteSocial",
-                "user/Mutations/followUser",
-                "user/Mutations/registerUser",
-                "user/Mutations/selectBackground",
-                "user/Mutations/unclaimProduct",
-                "user/Mutations/unfollowUser",
-                "user/Mutations/updateSelf",
-                "user/Mutations/updateSocials"
-              ]
+                "user/mutations/deleteSelf",
+                "user/mutations/followUser",
+                "user/mutations/registerUser",
+                "user/mutations/unfollowUser",
+                "user/mutations/updateSelf"
+              ],
+              "icon": "file-pen"
             },
             {
               "group": "Queries",
+              "pages": ["user/queries/checkUser", "user/queries/me"],
+              "icon": "clipboard-question"
+            }
+          ],
+          "icon": "user"
+        },
+        {
+          "group": "Social",
+          "pages": [
+            {
+              "group": "Mutations",
               "pages": [
-                "user/Queries/availableSocialTypes",
-                "user/Queries/checkUser",
-                "user/Queries/getProduct",
-                "user/Queries/me"
-              ]
+                "social/mutations/createSocial",
+                "social/mutations/updateSocials"
+              ],
+              "icon": "file-pen"
             },
             {
-              "group": "Types",
-              "pages": [
-                {
-                  "group": "Objects",
-                  "pages": [
-                    "user/Objects/Background",
-                    "user/Objects/Product",
-                    "user/Objects/BackgroundType",
-                    "user/Objects/Color",
-                    "user/Objects/FollowingCounts",
-                    "user/Objects/FollowPubSubData",
-                    "user/Objects/notifFollower",
-                    "user/Objects/ProductUser",
-                    "user/Objects/Social",
-                    "user/Objects/SocialType",
-                    "user/Objects/Subscription",
-                    "user/Objects/TextColor",
-                    "user/Objects/Type",
-                    "user/Objects/User",
-                    "user/Objects/UserCheckResponse"
-                  ]
-                },
-                {
-                  "group": "Inputs",
-                  "pages": [
-                    "user/Inputs/CreateProductInput",
-                    "user/Inputs/CreateSocialInput",
-                    "user/Inputs/FollowingSelect",
-                    "user/Inputs/RegisterDto",
-                    "user/Inputs/UpdateSocialInput",
-                    "user/Inputs/UpdateUserInput"
-                  ]
-                }
-              ]
+              "group": "Queries",
+              "pages": ["social/queries/availableSocialTypes"],
+              "icon": "clipboard-question"
             }
+          ],
+          "icon": "square-share-nodes"
+        },
+        {
+          "group": "Product",
+          "pages": [
+            {
+              "group": "Mutations",
+              "pages": [
+                "product/mutations/claimProduct",
+                "product/mutations/createProduct",
+                "product/mutations/unclaimProduct"
+              ],
+              "icon": "file-pen"
+            },
+            {
+              "group": "Queries",
+              "pages": ["product/queries/getProduct"],
+              "icon": "clipboard-question"
+            }
+          ],
+          "icon": "shirt"
+        },
+        {
+          "group": "Background",
+          "pages": [
+            {
+              "group": "Mutations",
+              "pages": ["background/mutations/selectBackground"],
+              "icon": "file-pen"
+            }
+          ],
+          "icon": "image"
+        }
+      ]
+    },
+    {
+      "group": "Types",
+      "pages": [
+        {
+          "group": "Objects",
+          "pages": [
+            "types/objects/Background",
+            "types/objects/Product",
+            "types/objects/BackgroundType",
+            "types/objects/Color",
+            "types/objects/FollowingCounts",
+            "types/objects/FollowPubSubData",
+            "types/objects/notifFollower",
+            "types/objects/ProductUser",
+            "types/objects/Social",
+            "types/objects/SocialType",
+            "types/objects/Subscription",
+            "types/objects/TextColor",
+            "types/objects/Type",
+            "types/objects/User",
+            "types/objects/UserCheckResponse"
+          ]
+        },
+        {
+          "group": "Inputs",
+          "pages": [
+            "types/inputs/CreateProductInput",
+            "types/inputs/CreateSocialInput",
+            "types/inputs/FollowingSelect",
+            "types/inputs/RegisterDto",
+            "types/inputs/UpdateSocialInput",
+            "types/inputs/UpdateUserInput"
           ]
         }
       ]

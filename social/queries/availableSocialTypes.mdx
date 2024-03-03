@@ -1,0 +1,50 @@
+---
+title: 'availableSocialTypes'
+description: 'Returns the Social types the user has not yet created a Social for.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="undefined" type=""/> 
+
+    
+    ## Returns
+
+    <ParamField body="availableSocialTypes" type="SocialType">
+    Information about a social media site that can be created as a Social.
+    <Expandable title="fields">
+    <ResponseField name="id" type="String!">UUID automatically generated at creation.</ResponseField>
+<ResponseField name="link" type="String!">URL used to reach a user profile on the social media site.</ResponseField>
+<ResponseField name="type" type="String!">Social Media site name in lowercase, no spaces.</ResponseField>
+    </Expandable>
+    </ParamField>
+    
+    <RequestExample>
+    ```graphql Request
+    query  {
+      availableSocialTypes {
+        id
+		link
+		type  
+        }
+    }
+    ```
+    ```json Headers
+{
+    "Authoriaztion": "Bearer <token>"
+}
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+{
+    "availableSocialTypes": [
+        {
+        "id": "08a16b83-9094-4e89-8c05-2ccadd5c1c7e",
+        "link": "link",
+        "type": "type"
+        }
+    ]
+}
+    ```
+    </ResponseExample>

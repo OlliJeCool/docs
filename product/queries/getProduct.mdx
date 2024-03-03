@@ -1,0 +1,64 @@
+---
+title: 'getProduct'
+description: 'Returns a Product fetched by its public ID, is used to access the user information from the site displayed after scanning a Product QR code.'
+---
+    
+    ## Arguments
+    
+    <ParamField body="productPublicId" type="String!"/> 
+
+    
+    ## Returns
+
+    <ParamField body="getProduct" type="Product">
+    Object containing information about a product.
+    <Expandable title="fields">
+    <ResponseField name="claimed" type="Boolean!">Indicates whether the product is claimed or not.</ResponseField>
+<ResponseField name="imageSrc" type="String">Source URL of the product image.</ResponseField>
+<ResponseField name="name" type="String!">Collection name.</ResponseField>
+<ResponseField name="orderId" type="String!">ID of the order the product was bought under.</ResponseField>
+<ResponseField name="productColor" type="Color!">Indicates the products color.</ResponseField>
+<ResponseField name="productType" type="Type!">Indicates the product type.</ResponseField>
+<ResponseField name="publicId" type="String!">CUID automatically assigned on creation.</ResponseField>
+<ResponseField name="specialBackground" type="Background">When the product has a special background connected to it.</ResponseField>
+<ResponseField name="user" type="ProductUser">When the product it is connected this user.</ResponseField>
+    </Expandable>
+    </ParamField>
+    
+    <RequestExample>
+    ```graphql Request
+    query ($productPublicId: String!) {
+      getProduct(productPublicId: $productPublicId) {
+        claimed
+		imageSrc
+		name
+		orderId
+		publicId  
+        }
+    }
+    ```
+    ```json Arguemnts
+    {
+        "productPublicId": "productPublicId"
+    }
+    ```
+    ```json Headers
+    {
+        "Authoriaztion": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+    {
+    "getProduct": {
+        "claimed": true,
+        "imageSrc": "imageSrc",
+        "name": "A name",
+        "orderId": "orderId",
+        "publicId": "publicId"
+        }
+    }
+    ```
+    </ResponseExample>
+    

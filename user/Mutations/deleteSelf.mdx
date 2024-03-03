@@ -5,9 +5,29 @@ description: 'Deletes the account of the currently authenticated user.'
     
     ## Arguments
     
-    <ParamField body="select" type=""/> 
+    <ParamField body="undefined" type=""/> 
 
     
     ## Returns
 
-    <ParamField body="select" type="Boolean!"/>
+    <ParamField body="deleteSelf" type="Boolean!"/>
+
+    <RequestExample>
+    ```graphql Request
+    mutation {
+      deleteSelf
+    }
+    ```
+    ```json Headers
+    {
+        "Authorization": "Bearer <token>"
+    }
+    ```
+    </RequestExample>
+    <ResponseExample>
+    ```json Response
+    {
+        "deleteSelf": true
+    }
+    ```
+    </ResponseExample>
