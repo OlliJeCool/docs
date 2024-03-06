@@ -1,0 +1,30 @@
+In this section, we provide an overview of the database architecture utilized by the Decode API. Explore how our database design supports the functionalities of the Decode Fashion platform, ensuring efficient data storage, retrieval, and management while utilizing the [Prisma ORM](https://www.prisma.io/docs) for seamless interaction with the underlying database.
+
+## Performance
+With using [Prisma ORM](https://www.prisma.io/docs) coupled with [GraphQL](https://graphql.org/learn/), a performance enhancement oppertunity became apparent.
+
+When sending a request to the Decode API to query specific fields of an object, we leverage [Pal.js](https://paljs.com/) to transform the field information contained in the `GraphQLResolveInfo` object into a streamlined JavaScript object. This object is then passed to Prisma, ensuring that only the requested fields are retrieved from the database. This approach effectively reduces the transaction costs associated with our database queries executed through Prisma.
+
+## Database Architecture
+Given the below diagram, we will explore the entities which form the Decode API database.
+<Frame caption="Database ERD">
+    <img src="/images/dbdiagram.png" />
+</Frame>
+
+
+### User
+The `User` entity holds a key position in the database architecture of the Decode Fashion platform. Its connections with other entities underscore its significance in the system. While Decode API retains basic user details like email locally, sensitive information such as passwords is securely handled by [Auth0](https://auth0.com/). This setup ensures strong authentication and data security measures. This collaboration enables smooth authentication and authorization processes, while Decode API concentrates on enhancing platform functionalities and user engagement.
+
+### Product
+The `Product` entity represents a Decode Fashion product within the platform's database. It connects to the `User` entity and serves as a representation of physical products. Each entry includes essential details like the product's ID, name, image source, and type. It tracks whether the product is claimed and by whom. The product entity does not store sensitive data and focuses on facilitating user-product associations for seamless management.
+
+### Social
+The `Social` entity represents a user's connection to a social media site in the Decode Fashion platform's database. Users can add their username for different social media sites, creating these connections. Each entry includes the username and the type of social media site. The entity tracks whether the connection should be displayed on the user's virtual contact card, indicating its active status. This feature enables users to manage their social media connections seamlessly without storing sensitive data.
+
+### Background
+The background entity within the Decode Fashion platform's database stores images categorized as basic or exclusive. Basic backgrounds are readily available, while exclusive backgrounds require special acquisition. Each entry includes details such as the image source and type.
+
+Users interact with the background entity in two key ways:
+
+- The `User.backgrounds` field of the `User` entity denotes backgrounds owned by the user, representing the collection of backgrounds associated with their profile.
+- The `User.selectedBackground` field of the`User` entity specifies the background chosen by the user to be displayed on their virtual contact card, allowing for personalized profile presentation.
