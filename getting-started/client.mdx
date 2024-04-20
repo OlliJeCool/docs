@@ -1,0 +1,11 @@
+The Decode Fashion platform's client-side application is built using Next.js for efficient React development, Tailwind CSS for responsive and streamlined UI design, and Apollo Client for data fetching, state management, and GraphQL operations. Apollo Client's hook-based approach simplifies GraphQL queries and mutations, enhancing code readability and maintainability.
+
+### Technologies Overview
+- [**Next.js**](https://nextjs.org/docs): Utilized for building the client-side application of the Decode Fashion platform, offering server-side rendering capabilities for improved SEO and faster page loads.
+- [**Tailwind CSS**](https://tailwindcss.com/docs/installation): Used for styling the user interface, employing a utility-first approach for rapid customization of UI components without custom CSS.
+- [**Apollo Client**](https://www.apollographql.com/docs/react): Handles data fetching, state management, and GraphQL operations, seamlessly integrating with Next.js and employing hooks for concise code. 
+
+
+### Handling GraphQL Status Codes
+GraphQL requests typically return a 200 status code regardless of the actual outcome. This means traditional HTTP status codes for client or server errors may not be directly detectable. Error handling in GraphQL involves interpreting response data to identify issues. Apollo Client provides robust mechanisms for error handling and data validation to manage these scenarios effectively and provide meaningful user feedback.
+More on this topic can be found in the official [Apollo Client Documentation](https://www.apollographql.com/docs/react/data/error-handling).

@@ -42,7 +42,8 @@
       "group": "Overview",
       "pages": [
         "getting-started/introduction",
-        "getting-started/database"
+        "getting-started/database",
+        "getting-started/client"
       ]
     },
     {
