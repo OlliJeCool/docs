@@ -43,7 +43,8 @@
       "pages": [
         "getting-started/introduction",
         "getting-started/database",
-        "getting-started/client"
+        "getting-started/client",
+        "getting-started/scenarios"
       ]
     },
     {
@@ -56,10 +57,10 @@
               "group": "Mutations",
               "pages": [
                 "user/mutations/deleteSelf",
-                "user/mutations/followUser",
                 "user/mutations/registerUser",
-                "user/mutations/unfollowUser",
-                "user/mutations/updateSelf"
+                "user/mutations/updateSelf",
+                "user/mutations/followUser",
+                "user/mutations/unfollowUser"
               ],
               "icon": "file-pen"
             },
@@ -78,7 +79,8 @@
               "group": "Mutations",
               "pages": [
                 "social/mutations/createSocial",
-                "social/mutations/updateSocials"
+                "social/mutations/updateSocials",
+                "social/mutations/deleteSocial"
               ],
               "icon": "file-pen"
             },
