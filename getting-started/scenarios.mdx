@@ -1,6 +1,6 @@
 ### User Profile Setup
 
-#### User Registration
+<Accordion title="User Registration">
 <Steps>
   <Step title="User Action">
     User is redirected to the Auth0 registration form.
@@ -15,8 +15,9 @@
     After successful registration, the user is redirected back to the platform.
   </Step>
 </Steps>
+</Accordion>
 
-#### User Login
+<Accordion title="User Login">
 <Steps>
   <Step title="User Action">
     User is redirected to the Auth0 login form.
@@ -28,8 +29,9 @@
     Upon successful authentication, the user is redirected back to the platform.
   </Step>
 </Steps>
+</Accordion>
 
-#### Edit User Profile
+<Accordion title="Edit User Profile">
 <Steps>
   <Step title="User Action">
    User clicks the "Settings" button in the bottom left corner of the application and updates their name and/or location details. Than clicks the "Save" button.
@@ -41,8 +43,9 @@
     The API returns the queried fields of the User and displays the new information in the client.
   </Step>
 </Steps>
+</Accordion>
 
-#### Customize Card Background
+<Accordion title="Customize Card Background">
 <Steps>
   <Step title="User Action">
     User selects a different background from their owned backgrounds displayed in the "Change Background" section in the client.
@@ -54,11 +57,12 @@
     The API returns the ID of the new selected bacgkround. The background in the client is changed in real time, and the new one is displayed on the card.
   </Step>
 </Steps>
+</Accordion>
 
 
 ## Manage Social Media Connections
 
-### Add Social Media Connection
+<Accordion title="Add Social Media Connection">
 <Steps>
   <Step title="User Action">
     User clicks the "+" symbol in the "Edit Socials" section in the client, selects the Social Media site to which they want to make a connection, enters their username on the given site, checks if they entered the correct username using the 'Is this correct?' button and than hits save.
@@ -70,8 +74,9 @@
     The API returns the queried fields of the newly created `Social`. The connection is then displayed in the list of social connection in the "Edit Socials" section, as well as on the card itself.
   </Step>
 </Steps>
+</Accordion>
 
-### Edit Social Media Connection
+<Accordion title="Edit Social Media Connection">
 <Steps>
   <Step title="User Action">
     User edits or activates/deactivates the Social connection in the "Edit Socials" section of the client. Only if any of the Social Media connections have been changed the "Save" button appears.
@@ -83,8 +88,9 @@
     The API returns the queried fields of the updated `Social`s. The updates display in the client in real time, changing either the Social Media connection itself, the visibility of them on the card and the appropriate changes in the list of `Social`s in the "Edit Socials" section.
   </Step>
 </Steps>
+</Accordion>
 
-### Delete Social Media Connection
+<Accordion title="Delete Social Media Connection">
 <Steps>
   <Step title="User Aciton">
     User selects a Social Media connection to delete from the list, clicks the delete button, confirms the deletion in the pop-up.
@@ -96,11 +102,11 @@
     The API returns a `Boolean` value depicting the result of the deletion. The Social Media is removed from the client.
   </Step>
 </Steps>
-
+</Accordion>
 
 ## Claim Products
 
-### Claim a Product
+<Accordion title="Claim a Product">
 <Steps>
   <Step title="User Action">
     User scans the QR code on a Decode Fashion product and is redirected to the page of that product. They log in and click the "Claim button" to claim the product.
@@ -113,7 +119,8 @@
   </Step>
 </Steps>
 
-#### Unclaim a Product
+</Accordion>
+<Accordion title="Unclaim a Product">
 <Steps>
   <Step title="User Action">
     User clicks the `Product` in the "Your Products" section in the client, clicks the unclaim button and confirms the decision.
@@ -125,10 +132,10 @@
     The API returns a `Boolean` value depicting the result of the unclaim action. The `Product`s page displays the "Calim" prompt again, and the `Product` is removed from the "Your Products" section. The associated background is removed from the "Change Background" section, and if selected the background of the card changes to a default one.
   </Step>
 </Steps>
-
+</Accordion>
 ### Connecting with Users
 
-#### Follow Other Users
+<Accordion title="Follow Other Users">
 <Steps>
   <Step title="User Action">
     User scans a QR code on a Decode Fashion product claimed by someone else. The owners card is displayed on the `Product`s page, and a follow button is visible if the user does not yet follow the owner. The user can click the button to follow the owner.
@@ -140,8 +147,8 @@
     The API returns a `Boolean` value depicting the result of the follow action. The newly followed user is visible in the "Connect" section in the "Following" tab.
   </Step>
 </Steps>
-
-#### View Followers
+</Accordion>
+<Accordion title="View Followers">
 <Steps>
   <Step title="User Action">
     User navigates to the "Connect" section and can view their followers under the "Followers" tab.
@@ -150,10 +157,10 @@
     User can click any of their followers from the list to view their card.
   </Step>
 </Steps>
-
+</Accordion>
 ### Logout
 
-#### Logout from Account
+<Accordion title="Logout">
 <Steps>
   <Step title="User Action">
     User clicks the "Logout" button in the bottom left corner of the client.
@@ -162,3 +169,4 @@
     User is successfully logged out of their account.
   </Step>
 </Steps>
+</Accordion>
