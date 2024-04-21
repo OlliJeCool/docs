@@ -10,6 +10,7 @@ description: 'Claims a product - links it to the logged in user who is claiming 
     
     ## Returns
 
+    <Info>If the `Product` is already claimed, this mutation returns a `ConflictException`</Info>
     <ParamField body="select" type="Product">
     Object containing information about a product.
     <Expandable title="fields">

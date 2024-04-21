@@ -9,7 +9,7 @@ description: 'Allows the currently authenticated user to unfollow another user.'
 
     
     ## Returns
-
+    <Info>If the target is not followed, this mutation returns a `NotFoundException`.</Info>
     <ParamField body="unfollowUser" type="Boolean!"/>
 
 

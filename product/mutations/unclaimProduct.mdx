@@ -11,7 +11,7 @@ description: 'Uncalims a product - unlinks it from the logged in user who is unc
     ## Returns
 
     <ParamField body="unclaimProduct" type="Boolean!"/>
-
+    <Info>If the `Product` does not exists, this mutation returns a `NotFoundException`. If the user trying to unclaim the `Product` is not the owner, this mutation returns a `UnauthorizedException`.</Info>
     <RequestExample>
     ```graphql Request
     mutation ($productPublicId: String!) {

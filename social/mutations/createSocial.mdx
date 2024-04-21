@@ -15,7 +15,7 @@ description: 'Creates a new Social from the given input, linked to currently sig
 
     
     ## Returns
-
+<Info>If a `Social` with tha same `SocialType` already registered for the user, this mutation returns a `ConflictException`.</Info>
     <ParamField body="createSocial" type="Social">
     An object containing all information about a Social media connection.
     <Expandable title="fields">

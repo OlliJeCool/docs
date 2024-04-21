@@ -9,7 +9,7 @@ description: 'Allows the currently authenticated user to select a background.'
 
     
     ## Returns
-
+    <Info>If the `Background` does not exist or is not owned by the user, this mutation returns a `NotFoundException`.</Info>
     <ParamField body="selectBackground" type="String!"/>
 
     <RequestExample>

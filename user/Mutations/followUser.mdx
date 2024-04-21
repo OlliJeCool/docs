@@ -9,7 +9,7 @@ description: 'Allows the currently authenticated user to follow another user.'
 
     
     ## Returns
-
+    <Info>If the target is already followed, this mutation returns a `ConflictException`.</Info>
     <ParamField body="followUser" type="Boolean!"/>
 
     <RequestExample>
