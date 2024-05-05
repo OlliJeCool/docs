@@ -50,28 +50,7 @@
     {
       "group": "Modules",
       "pages": [
-        {
-          "group": "User",
-          "pages": [
-            {
-              "group": "Mutations",
-              "pages": [
-                "user/mutations/deleteSelf",
-                "user/mutations/registerUser",
-                "user/mutations/updateSelf",
-                "user/mutations/followUser",
-                "user/mutations/unfollowUser"
-              ],
-              "icon": "file-pen"
-            },
-            {
-              "group": "Queries",
-              "pages": ["user/queries/checkUser", "user/queries/me"],
-              "icon": "clipboard-question"
-            }
-          ],
-          "icon": "user"
-        },
+        
         {
           "group": "Social",
           "pages": [
